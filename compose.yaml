@@ -1,0 +1,16 @@
+name: message-api
+
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: messageboard
+      POSTGRES_USER: messageboard
+      POSTGRES_PASSWORD: messageboard
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
