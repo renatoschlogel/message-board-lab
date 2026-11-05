@@ -12,5 +12,16 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
+  api:
+    image: message-api:1.0
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/messageboard
+      SPRING_DATASOURCE_USERNAME: messageboard
+      SPRING_DATASOURCE_PASSWORD: messageboard
+    depends_on:
+      - postgres
+
 volumes:
   postgres_data:
