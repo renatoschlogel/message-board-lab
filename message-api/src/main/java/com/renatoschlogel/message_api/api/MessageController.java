@@ -3,6 +3,7 @@ package com.renatoschlogel.message_api.api;
 import com.renatoschlogel.message_api.domain.MessageService;
 import com.renatoschlogel.message_api.infra.Message;
 import lombok.AllArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -25,5 +26,10 @@ public class MessageController {
     }
 
 
+
+    @GetMapping
+    public ResponseEntity<String> oi() {
+        return ResponseEntity.ok("ooi");
+    }
 
 }
