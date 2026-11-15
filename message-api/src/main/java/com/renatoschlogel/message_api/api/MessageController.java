@@ -27,7 +27,7 @@ public class MessageController {
 
 
 
-    @GetMapping
+    @GetMapping("/oi")
     public ResponseEntity<String> oi() {
         return ResponseEntity.ok("ooi");
     }
